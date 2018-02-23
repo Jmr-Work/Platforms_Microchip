@@ -1,0 +1,20 @@
+@brief 		Getting Started with MPLAB Xpress
+@details 	x
+@auth 		Justin Reina
+@date 		2/22/18	
+
+@section 	Reference
+	[1] http://www.microchip.com/mplab/mplab-xpress
+	[2] PIC24F\Dev Boards\PIC24F - DM240016\DocXpress Quick Start Guide - 50002560A.pdf
+	[3] PIC24F\Dev Boards\PIC24F - DM240016\DocSimplifying 16-bit PIC Designs.pdf
+
+@section 	Notes
+	allows users to easily transition between the two environments.
+	MPLAB Code Configurator - generate initi/appl code using a graphical interface and pin map
+	MPLAB Code Configurator - Direct code generation, quick!
+	
+Compatible Hardware
+	MPLAB Xpress Evaluation Boards
+	Curiosity Development Boards
+	Explorer 16/32 Development Board
+	PICkit 3 Programmer/Debugger

@@ -1,0 +1,41 @@
+UBW32 HelloUSBWorld - Using the PIC32 UART - https://www.youtube.com/watch?v=7Jl3GNANnTQ
+UBW32 (32 bit PIC32 based USB Bit Whacker) - Bhttp://www.schmalzhaus.com/UBW32/
+	*http://www.schmalzhaus.com/UBW32/doc/UBW32Documentation_v1_4.html
+
+So it turned out I have a UBW with PIC32 already. I got it maybe 6 years ago and never got to use it. What a coincidence.
+
+Anyway, as a first step, I wanted to check if it still works and if I can load something on it to do something. It took some digging. The process was more complicated than it actually was... I think there was too much text on the page causing low SNR. Here are the steps I took to load something onto the board:
+
+[X] 0. Make sure when you plug in the UBW your computer recognizes it as a COM device. I basically waited a few seconds and it automatically installed driver (I think it's a Windows 7+ feature).
+
+[X] 1. Go to http://www.schmalzhaus.com/UBW32/doc/UBW32Documentation_v1_4.html
+to check out USB commands to see if I can even talk to the board
+		
+[X] 2. Check control flow default -> none. Set up Putty for simple USB interface
+
+	*Default is 9600 baud
+
+[?] 3. Found some typo and return errors and went to v1_6 documentation. Used PD to set pin direction and then use PO to set pin high or low (test with LED_R) Commands case sensitive, no extra space allowed before <CR> So the thing is alive after all.
+
+4. Downloaded the USB HID Bootloader zip called "HIDBootloader.zip - version 2.9j" from http://www.schmalzhaus.com/UBW32/doc/FirmwareBuildInstructions.html
+
+	* Hold USER & RESET at same time to enter bootloader mode
+	
+5. Extract bootloader folder onto desktop. Start the .exe file in the folder. Plug in UBW and place it in bootloader mode (button presses).
+
+	* Hold USER & RESET at same time to enter bootloader mode
+
+6. Download a HelloUSBWorld project and see if I can load the hex and yes it loads
+http://www.schmalzhaus.com/UBW32/FW/HelloUSBWorld/
+
+7. Follow instructions in this video and set baud rate to 40,000 on Putty.
+https://www.youtube.com/watch?v=7Jl3GNANnTQ
+
+8. press <CR> in the terminal to receive Hello World back.
+
+
+So, this is the first part of the puzzle. The next part would be the following steps, which I think should be much easier:
+
+Get MPLAB, write code, compile, generate hex, and upload to test.
+
+This makes me appreciate how some companies try very hard to make it very easy for users to start using something (e.g. TI). Well, they have to and it's their job.

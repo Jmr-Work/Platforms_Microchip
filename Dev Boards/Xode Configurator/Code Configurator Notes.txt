@@ -1,0 +1,17 @@
+@brief 		
+@details 	
+@auth 		Justin Reina
+@date 		
+
+@section 	Reference
+	[1] http://microchipdeveloper.com/mplabx:projects-standalone
+	[2] http://microchipdeveloper.com/mcc:overview
+
+
+@section 	Procedure
+	The first step of any project is to use the MPLAB X wizard tool to create a project
+	File->New Project...->Standalone Project
+		PICkit3
+		XC16
+		PIC24FJ256GA705
+	Tools->Embedded->Code Configurator
