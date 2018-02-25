@@ -1,0 +1,25 @@
+@brief 		Procedure for generation of new project with MCC
+@details 	x
+@auth 		Justin Reina
+@date 		2/23/18
+
+@section 	Procedure (defaults unless listed)
+	Create new Project 	(File->New Project...)
+	Select Bare 		(Microchip Embedded->Standalone Project)
+	Select MCU/Comp/Dbg	(e.g. "PIC24FJ256GA705/XC16/PICkit3")
+	Open MCC 			(Tools->Embedded->MPLAB MCC)
+	Save MC3 			(rec. project/mplab/<projName>.mc3)
+	Configure Base 		(Int, Pin & Sys, Setup & Registers as needed)
+	Add Peripherals	 	(Device Resources as needed, w/config)
+	Add Libraries	 	(Device Resources as needed, w/config)
+	Add Mikro-E Clicks 	(Device Resources as needed, w/config)
+	Complete Config		(Review)
+	Generate 			(Resource Management[MCC]->Project Resources->Generate)
+		@rslt 	
+		15:32:23.346    INFO: Generation complete.
+		15:32:23.386    INFO: Saved configuration to file ...\DevProj.mc3
+		mcc_generated_files\ generation
+	Rename 'mcc_generated_files\' to 'bsp\'
+	Clean & Build
+	Done!
+
